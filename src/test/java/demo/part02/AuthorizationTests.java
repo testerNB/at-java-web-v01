@@ -22,7 +22,7 @@ public class AuthorizationTests {
         password.setValue("stand_pass1");
         loginButton.click();
 
-        $(By.xpath("//*[contains(text(), 'Поиск авиабилетов') or contains(text(), 'Welcome')]"))
+        $(By.xpath("//*[contains(text(), 'Поиск авиабилетов') ]"))
                 .shouldBe(visible);
     }
 
@@ -38,7 +38,7 @@ public class AuthorizationTests {
         password.setValue("stand");
         loginButton.click();
 
-        $(By.xpath("//*[contains(text(), 'Неверное имя пользователя или пароль') or contains(text(), 'Invalid')]"))
+        $(By.xpath("//*[contains(text(), 'Неверное имя пользователя или пароль') ]"))
                 .shouldBe(visible);
     }
 }
